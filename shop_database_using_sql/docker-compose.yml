@@ -1,0 +1,26 @@
+version: "3.3"
+
+services:
+  postgres:
+    image: postgres:9.6
+    container_name: postgres_shop_db
+    environment:
+      POSTGRES_USER: shop_user
+      POSTGRES_PASSWORD: shop_password
+      POSTGRES_DB: shop
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./src:/docker-entrypoint-initdb.d
+
+  adminer:
+    image: adminer
+    container_name: adminer_shop_db
+    depends_on:
+      - postgres
+    ports:
+      - 8080:8080
+
+volumes:
+  postgres_data:

@@ -1,0 +1,4 @@
+string_calculator.egg-info/
+build/
+.vscode/
+__pycache__/

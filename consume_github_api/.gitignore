@@ -1,0 +1,8 @@
+env/
+.github/
+.env
+.vscode/
+__pycache__/
+consume_github_api.egg-info/
+build/
+draft/

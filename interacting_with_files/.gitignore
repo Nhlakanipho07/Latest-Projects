@@ -1,0 +1,6 @@
+build/lib/interacting_with_files/
+dist/
+interacting_with_files.egg-info/
+venv/
+__init__.py
+
